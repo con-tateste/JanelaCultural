@@ -464,6 +464,7 @@ app.get('/eventos/inscritos/:id_usuario', async (req, res) => {
 });
 
 // Inicia o servidor
-app.listen(8080, () => {
-    console.log('Servidor rodando em http://localhost:8080');
+app.listen(8080, '0.0.0.0', () => {
+    console.log('Servidor rodando na porta 8080 em todas as interfaces (0.0.0.0)');
 });
+
