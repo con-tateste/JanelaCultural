@@ -6,7 +6,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = 8080;
+const port = process.env.PORT || 8080;
 
 // CORS
 app.use(cors({
@@ -464,7 +464,6 @@ app.get('/eventos/inscritos/:id_usuario', async (req, res) => {
 });
 
 // Inicia o servidor
-app.listen(8080, '0.0.0.0', () => {
-    console.log('Servidor rodando na porta 8080 em todas as interfaces (0.0.0.0)');
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
-
